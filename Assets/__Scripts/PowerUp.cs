@@ -55,10 +55,19 @@ public class PowerUp : MonoBehaviour {
             c.a = 1f - (u * 0.5f);
             letter.color = c;
         }
+
 	}
+
+    public void AbsorbedBy(GameObject target)
+    {
+        Destroy(this.gameObject);
+    }
 
     public void SetType(WeaponType wt)
     {
-        WeaponDefinition def = Main.GetComponent
+        WeaponDefinition def = Main.GetWeaponDefinition(wt);
+        cube.GetComponent<Renderer>().material.color = def.color;
+        letter.text = def.letter;
+        type = wt;
     }
 }

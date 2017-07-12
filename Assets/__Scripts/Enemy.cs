@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
     public int remainingDamageFrames = 0;
     public Bounds bounds;
     public Vector3 boundsCenterOffset;
+    public float powerUpDropChance = 1f;
 
     void Awake()
     {
@@ -99,6 +100,7 @@ public class Enemy : MonoBehaviour {
                 health -= Main.W_DEFS[p.type].damageOnHit;
                 if (health <= 0)
                 {
+                    Main.S.ShipDestroyed(this);
                     Destroy(this.gameObject);
                 }
                 Destroy(other);
