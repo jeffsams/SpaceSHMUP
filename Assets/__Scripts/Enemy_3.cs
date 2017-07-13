@@ -31,6 +31,11 @@ public class Enemy_3 : Enemy
    
         birthTime = Time.time;
     }
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
     public override void Move()
     {
       
@@ -50,9 +55,4 @@ public class Enemy_3 : Enemy
     }
 }
 
-// Update is called once per frame
-void Update()
-{
 
-}
-}

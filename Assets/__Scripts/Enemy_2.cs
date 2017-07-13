@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy2 : Enemy {
+public class Enemy_2 : Enemy {
     public Vector3[] points;
     public float birthTime;
     public float lifeTime = 10;
@@ -11,6 +11,7 @@ public class Enemy2 : Enemy {
 	void Start () {
         points = new Vector3[2];
         Vector3 cbMin = Utils.camBounds.min;
+        Vector3 cbMax = Utils.camBounds.max;
         Vector3 v = Vector3.zero;
 
         v.x = cbMin.x - Main.S.enemySpawnPadding;
