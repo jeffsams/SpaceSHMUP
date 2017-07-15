@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< HEAD
 public class Main : MonoBehaviour
 {
+=======
+public class Main : MonoBehaviour {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     static public Main S;
     static public Dictionary<WeaponType, WeaponDefinition> W_DEFS;
     public GameObject[] prefabEnemies;
@@ -80,14 +84,20 @@ public class Main : MonoBehaviour
     {
         Application.LoadLevel("_Scene_0");
     }
+<<<<<<< HEAD
     // Use this for initialization
     void Start()
     {
+=======
+	// Use this for initialization
+	void Start () {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         activeWeaponTypes = new WeaponType[weaponDefinitions.Length];
         for (int i = 0; i < weaponDefinitions.Length; i++)
         {
             activeWeaponTypes[i] = weaponDefinitions[i].type;
         }
+<<<<<<< HEAD
     }
 
     // Update is called once per frame
@@ -95,4 +105,12 @@ public class Main : MonoBehaviour
     {
 
     }
+=======
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
 }

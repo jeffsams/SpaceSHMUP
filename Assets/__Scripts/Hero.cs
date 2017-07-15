@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+<<<<<<< HEAD
 public class Hero : MonoBehaviour
 {
+=======
+public class Hero : MonoBehaviour {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
 
     static public Hero S;
 
@@ -19,8 +23,12 @@ public class Hero : MonoBehaviour
     public WeaponFireDelegate fireDelegate;
     public Weapon[] weapons;
 
+<<<<<<< HEAD
     void Awake()
     {
+=======
+    void Awake() {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         S = this;
         bounds = Utils.CombineBoundsOfChildren(this.gameObject);
 
@@ -28,15 +36,23 @@ public class Hero : MonoBehaviour
 
 
     // Use this for initialization
+<<<<<<< HEAD
     void Start()
     {
+=======
+    void Start() {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         ClearWeapons();
         weapons[0].SetType(WeaponType.blaster);
     }
 
     // Update is called once per frame
+<<<<<<< HEAD
     void Update()
     {
+=======
+    void Update() {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         float xAxis = Input.GetAxis("Horizontal");
         float yAxis = Input.GetAxis("Vertical");
 
@@ -49,8 +65,12 @@ public class Hero : MonoBehaviour
 
         // constrain to screen
         Vector3 off = Utils.ScreenBoundsCheck(bounds, BoundsTest.onScreen);
+<<<<<<< HEAD
         if (off != Vector3.zero)
         {  // we need to move ship back on screen
+=======
+        if (off != Vector3.zero) {  // we need to move ship back on screen
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
             pos -= off;
             transform.position = pos;
         }
@@ -82,8 +102,12 @@ public class Hero : MonoBehaviour
             {
                 shieldLevel--;
                 Destroy(go);
+<<<<<<< HEAD
             }
             else if (go.tag == "PowerUp")
+=======
+            } else if (go.tag == "PowerUp")
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
             {
                 AbsorbPowerUp(go);
             }
@@ -101,7 +125,11 @@ public class Hero : MonoBehaviour
     public void AbsorbPowerUp(GameObject go)
     {
         PowerUp pu = go.GetComponent<PowerUp>();
+<<<<<<< HEAD
         switch (pu.type)
+=======
+        switch(pu.type)
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         {
             case WeaponType.shield:
                 shieldLevel++;
@@ -140,12 +168,20 @@ public class Hero : MonoBehaviour
 
     void ClearWeapons()
     {
+<<<<<<< HEAD
         foreach (Weapon w in weapons)
+=======
+        foreach(Weapon w in weapons)
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         {
             w.SetType(WeaponType.none);
         }
     }
+<<<<<<< HEAD
     public float shieldLevel
+=======
+        public float shieldLevel
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     {
         get
         {
@@ -161,4 +197,11 @@ public class Hero : MonoBehaviour
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+        }
+    
+
+    
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582

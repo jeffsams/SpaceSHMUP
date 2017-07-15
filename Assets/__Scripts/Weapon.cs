@@ -26,8 +26,12 @@ public class WeaponDefinition
     public float velocity = 20;
 }
 
+<<<<<<< HEAD
 public class Weapon : MonoBehaviour
 {
+=======
+public class Weapon : MonoBehaviour {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     static public Transform PROJECTILE_ANCHOR;
 
     public bool ______;
@@ -36,15 +40,25 @@ public class Weapon : MonoBehaviour
     public WeaponDefinition def;
     public GameObject collar;
     public float lastShot;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     void Awake()
     {
         collar = transform.Find("Collar").gameObject;
     }
+<<<<<<< HEAD
     // Use this for initialization
     void Start()
     {
 
+=======
+	// Use this for initialization
+	void Start () {
+      
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         SetType(_type);
 
         if (PROJECTILE_ANCHOR == null)
@@ -57,23 +71,38 @@ public class Weapon : MonoBehaviour
         {
             Hero.S.fireDelegate += Fire;
         }
+<<<<<<< HEAD
     }
+=======
+	}
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
 
     public WeaponType type
     {
         get { return (_type); }
+<<<<<<< HEAD
         set { SetType(value); }
     }
 
     public void SetType(WeaponType wt)
+=======
+        set { SetType(value);  }
+    }
+
+    public void SetType (WeaponType wt)
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     {
         _type = wt;
         if (type == WeaponType.none)
         {
             this.gameObject.SetActive(false);
             return;
+<<<<<<< HEAD
         }
         else
+=======
+        } else
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         {
             this.gameObject.SetActive(true);
         }
@@ -81,7 +110,11 @@ public class Weapon : MonoBehaviour
         collar.GetComponent<Renderer>().material.color = def.color;
         lastShot = 0;
     }
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     public void Fire()
     {
         if (!gameObject.activeInHierarchy) return;
@@ -128,9 +161,16 @@ public class Weapon : MonoBehaviour
         lastShot = Time.time;
         return (p);
     }
+<<<<<<< HEAD
     // Update is called once per frame
     void Update()
     {
 
     }
+=======
+	// Update is called once per frame
+	void Update () {
+		
+	}
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
 }

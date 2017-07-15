@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< HEAD
 public class PowerUp : MonoBehaviour
 {
+=======
+public class PowerUp : MonoBehaviour {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     public Vector2 rotMinMax = new Vector2(15, 90);
     public Vector2 driftMinMax = new Vector2(.25f, 2);
     public float lifeTime = 6f;
@@ -35,6 +39,7 @@ public class PowerUp : MonoBehaviour
         birthTime = Time.time;
     }
     // Use this for initialization
+<<<<<<< HEAD
     void Start()
     {
 
@@ -43,6 +48,14 @@ public class PowerUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+=======
+    void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         cube.transform.rotation = Quaternion.Euler(rotPerSecond * Time.time);
         float u = (Time.time - (birthTime + lifeTime)) / fadeTime;
         if (u >= 1)
@@ -50,8 +63,12 @@ public class PowerUp : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
+<<<<<<< HEAD
         if (u > 0)
         {
+=======
+        if (u > 0) {
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
             Color c = cube.GetComponent<Renderer>().material.color;
             c.a = 1f - u;
             cube.GetComponent<Renderer>().material.color = c;
@@ -60,7 +77,11 @@ public class PowerUp : MonoBehaviour
             letter.color = c;
         }
 
+<<<<<<< HEAD
     }
+=======
+	}
+>>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
 
     public void AbsorbedBy(GameObject target)
     {
