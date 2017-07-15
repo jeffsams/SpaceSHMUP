@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
 public class Enemy : MonoBehaviour
 {
-=======
-public class Enemy : MonoBehaviour {
->>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     public float speed = 10f;
     public float fireRate = .3f;
     public float health = 10;
@@ -31,7 +27,6 @@ public class Enemy : MonoBehaviour {
         }
         InvokeRepeating("CheckoffScreen", 0f, 2f);
     }
-<<<<<<< HEAD
     // Use this for initialization
     void Start()
     {
@@ -43,17 +38,6 @@ public class Enemy : MonoBehaviour {
     {
         Move();
         if (remainingDamageFrames > 0)
-=======
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        Move();
-        if (remainingDamageFrames >0)
->>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
         {
             remainingDamageFrames--;
 
@@ -62,11 +46,7 @@ public class Enemy : MonoBehaviour {
                 UnShowDamage();
             }
         }
-<<<<<<< HEAD
     }
-=======
-	}
->>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
 
     public virtual void Move()
     {
@@ -106,11 +86,7 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-<<<<<<< HEAD
     void OnCollisionEnter(Collision coll)
-=======
-    void OnCollisionEnter (Collision coll)
->>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     {
         GameObject other = coll.gameObject;
         switch (other.tag)
@@ -118,11 +94,7 @@ public class Enemy : MonoBehaviour {
             case "ProjectileHero":
                 Projectile p = other.GetComponent<Projectile>();
                 bounds.center = transform.position + boundsCenterOffset;
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
                 if (bounds.extents == Vector3.zero || Utils.ScreenBoundsCheck(bounds, BoundsTest.offScreen) != Vector3.zero)
                 {
                     Destroy(other);
@@ -146,11 +118,7 @@ public class Enemy : MonoBehaviour {
         {
             m.color = Color.red;
         }
-<<<<<<< HEAD
         remainingDamageFrames = showDamageForFrames;
-=======
-        remainingDamageFrames = showDamageForFrames; 
->>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
     }
     void UnShowDamage()
     {
@@ -159,8 +127,4 @@ public class Enemy : MonoBehaviour {
             materials[i].color = originalColors[i];
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 311ac68533116b6b3e9a1bb8e46c90121b41a582
